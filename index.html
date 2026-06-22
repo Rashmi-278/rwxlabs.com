@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>rwxLabs — Research · Relations · eXecution</title>
+<meta name="description" content="An independent lab for Ethereum's public infrastructure. Research, relations, and execution as one pipeline.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg0: #0B0A1F;
+    --bg1: #16123A;
+    --violet: #7C5CFF;
+    --cyan: #38E1D6;
+    --coral: #FF6E8A;
+    --gold: #FFC861;
+    --text: #EDEBFF;
+    --dim: #9B97C9;
+    --mono: "JetBrains Mono", ui-monospace, monospace;
+    --sans: "Space Grotesk", system-ui, sans-serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { height: 100%; overflow: hidden; }
+  body {
+    background: var(--bg0);
+    color: var(--text);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+  }
+
+  /* ambient animated background */
+  .aurora { position: fixed; inset: 0; z-index: 0; overflow: hidden; }
+  .blob { position: absolute; border-radius: 50%; filter: blur(90px); opacity: 0.55; mix-blend-mode: screen; }
+  .b1 { width: 52vw; height: 52vw; background: var(--violet); top: -18vw; left: -10vw; animation: drift1 22s ease-in-out infinite; }
+  .b2 { width: 44vw; height: 44vw; background: var(--cyan); bottom: -16vw; right: -8vw; animation: drift2 26s ease-in-out infinite; }
+  .b3 { width: 34vw; height: 34vw; background: var(--coral); top: 38%; left: 52%; opacity: 0.4; animation: drift3 30s ease-in-out infinite; }
+  @keyframes drift1 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(8vw,6vw) scale(1.12)} }
+  @keyframes drift2 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-7vw,-5vw) scale(1.1)} }
+  @keyframes drift3 { 0%,100%{transform:translate(0,0) scale(1)} 50%{transform:translate(-6vw,4vw) scale(0.9)} }
+
+  /* subtle grain/vignette */
+  .vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(11,10,31,0.6) 100%); }
+
+  .frame { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column;
+    padding: clamp(22px, 4vh, 46px) clamp(24px, 6vw, 80px); }
+
+  /* top bar */
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: var(--mono); font-size: clamp(18px,2.4vw,22px); font-weight: 500; letter-spacing: 1px; }
+  .logo .x { color: var(--cyan); font-weight: 700; }
+  .logo .labs { font-family: var(--sans); font-weight: 600; margin-left: 3px; }
+  .tag { font-family: var(--mono); font-size: 12px; letter-spacing: 2px; color: var(--dim);
+    text-transform: uppercase; opacity: 0; animation: fadein .8s ease forwards .3s; }
+
+  /* center thesis */
+  .core { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 100%; }
+  .eyebrow { font-family: var(--mono); font-size: clamp(11px,1.4vw,13px); letter-spacing: 3px;
+    text-transform: uppercase; margin-bottom: clamp(14px,2.2vh,22px);
+    background: linear-gradient(90deg, var(--cyan), var(--violet), var(--coral));
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+    background-size: 200% auto; animation: shimmer 6s linear infinite, fadein .8s ease forwards; }
+  @keyframes shimmer { to { background-position: 200% center; } }
+
+  h1 { font-size: clamp(28px, 4.4vw, 56px); font-weight: 700; line-height: 1.08;
+    letter-spacing: -0.03em; }
+  h1 .line { white-space: nowrap; }
+  h1 .line { display: block; opacity: 0; transform: translateY(22px);
+    animation: rise .9s cubic-bezier(.2,.7,.2,1) forwards; }
+  h1 .line:nth-child(1){ animation-delay:.15s } 
+  h1 .line:nth-child(2){ animation-delay:.30s }
+  h1 .line:nth-child(3){ animation-delay:.45s }
+  h1 .grad { background: linear-gradient(100deg, var(--cyan) 0%, var(--violet) 55%, var(--coral) 100%);
+    -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+
+  .sub { margin-top: clamp(18px,3vh,30px); font-size: clamp(15px,1.7vw,19px); color: var(--dim);
+    max-width: 42ch; line-height: 1.55; opacity: 0; animation: fadein 1s ease forwards .7s; }
+  .note { margin-top: clamp(16px,2.4vh,22px); font-family: var(--mono);
+    font-size: clamp(12px,1.3vw,14px); color: var(--dim); max-width: 52ch; line-height: 1.7;
+    opacity: 0; animation: fadein 1s ease forwards .9s; }
+  .note .prompt { color: var(--cyan); margin-right: 8px; }
+  .note .hl-mono { color: var(--text); font-weight: 700; }
+
+  /* pipeline + footer row */
+  .base { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; flex-wrap: wrap; }
+
+  .pipe { display: flex; align-items: center; gap: clamp(10px,1.4vw,20px);
+    opacity: 0; animation: fadein 1s ease forwards .9s; }
+  .node { display: flex; flex-direction: column; align-items: center; gap: 7px; position: relative; }
+  .dot { width: clamp(40px,5vw,54px); height: clamp(40px,5vw,54px); border-radius: 14px;
+    display: grid; place-items: center; font-family: var(--mono); font-weight: 700;
+    font-size: clamp(18px,2.4vw,24px); border: 1px solid rgba(237,235,255,0.14);
+    background: rgba(255,255,255,0.03); backdrop-filter: blur(8px); position: relative; overflow: hidden; }
+  .node.n1 .dot { color: var(--cyan); }
+  .node.n2 .dot { color: var(--violet); }
+  .node.n3 .dot { color: var(--coral); }
+  .dot::after { content:""; position:absolute; inset:0; border-radius:14px;
+    box-shadow: 0 0 0 0 currentColor; animation: pulse 3s ease-in-out infinite; }
+  .node.n1 .dot::after { animation-delay: 0s; }
+  .node.n2 .dot::after { animation-delay: 1s; }
+  .node.n3 .dot::after { animation-delay: 2s; }
+  @keyframes pulse { 0%,100%{ box-shadow: 0 0 0 0 rgba(255,255,255,0);} 
+    35%{ box-shadow: 0 0 22px 1px currentColor; opacity:1;} }
+  .node .lbl { font-family: var(--mono); font-size: clamp(9px,1vw,11px); letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--dim); }
+
+  .conn { width: clamp(26px,4vw,60px); height: 2px; border-radius: 2px; position: relative; overflow: hidden;
+    background: rgba(237,235,255,0.12); }
+  .conn::before { content:""; position:absolute; top:0; left:-40%; width:40%; height:100%;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    animation: flow 3s linear infinite; }
+  .conn.c2::before { background: linear-gradient(90deg, transparent, var(--violet), transparent); animation-delay: 1.5s; }
+  @keyframes flow { 0%{ left:-40%; } 100%{ left:110%; } }
+
+  .meta { font-family: var(--mono); font-size: clamp(10px,1.1vw,12px); color: var(--dim);
+    text-align: right; line-height: 1.7; opacity: 0; animation: fadein 1s ease forwards 1.1s; }
+  .meta a { color: var(--text); text-decoration: none; transition: color .2s; }
+  .meta a:hover { color: var(--cyan); }
+
+  @keyframes rise { to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadein { to { opacity: 1; } }
+
+  @media (max-width: 680px) {
+    .core { max-width: 100%; }
+    h1 { font-size: clamp(28px,8vw,40px); }
+    h1 .line { white-space: normal; }
+    .base { flex-direction: column; align-items: flex-start; gap: 22px; }
+    .meta { text-align: left; }
+    .tag { display: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    * { animation: none !important; }
+    h1 .line, .sub, .eyebrow, .pipe, .meta, .tag { opacity: 1 !important; transform: none !important; }
+  }
+</style>
+</head>
+<body>
+  <div class="aurora">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+  <div class="vignette"></div>
+
+  <div class="frame">
+    <div class="top">
+      <div class="logo">rw<span class="x">x</span><span class="labs">Labs</span></div>
+    </div>
+
+    <div class="core">
+      <div class="eyebrow">research · worldbuilding · execution</div>
+      <h1>
+        <span class="line">Research earns</span>
+        <span class="line">the right to</span>
+        <span class="line grad">build and ship.</span>
+      </h1>
+      <p class="sub">Well-researched work across software, business, and community development.</p>
+      <p class="note"><span class="prompt">$</span> the name is inspired from Linux file permissions — read, write, execute. the principled approach we follow.</p>
+    </div>
+
+    <div class="base">
+      <div class="pipe">
+        <div class="node n1"><div class="dot">r</div><div class="lbl">research</div></div>
+        <div class="conn c1"></div>
+        <div class="node n2"><div class="dot">w</div><div class="lbl">worldbuild</div></div>
+        <div class="conn c2"></div>
+        <div class="node n3"><div class="dot">x</div><div class="lbl">execute</div></div>
+      </div>
+      <div class="meta">
+        <a href="mailto:hello@rwxlabs.com">hello@rwxlabs.com</a><br>
+        By Sun Flora Collective (OPC) Pvt. Ltd. 
+      </div>
+    </div>
+  </div>
+</body>
+</html>
