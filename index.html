@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>rwxLabs — Research · Worldbuild · Execution</title>
-<meta name="description" content="An independent lab for research, worldbuilding, and execution as one pipeline.">
+<meta name="description" content="An independent lab for research, worldbuilding, and execution as one pipeline. Research on grants data, governance and CROPS for Ethereum institutions.">
+<link rel="alternate" type="application/json" href="research.json" title="rwxLabs research catalog">
+<link rel="alternate" type="application/rss+xml" href="feed.xml" title="rwxLabs research">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -22,7 +24,8 @@
     --sans: "Space Grotesk", system-ui, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { height: 100%; overflow: hidden; }
+  html, body { min-height: 100%; }
+  html { height: 100%; }
   body {
     background: var(--bg0);
     color: var(--text);
@@ -45,7 +48,7 @@
   .vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 40%, rgba(11,10,31,0.6) 100%); }
 
-  .frame { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column;
+  .frame { position: relative; z-index: 2; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
     padding: clamp(22px, 4vh, 46px) clamp(24px, 6vw, 80px); }
 
   /* top bar */
@@ -53,8 +56,16 @@
   .logo { font-family: var(--mono); font-size: clamp(18px,2.4vw,22px); font-weight: 500; letter-spacing: 1px; }
   .logo .x { color: var(--cyan); font-weight: 700; }
   .logo .labs { font-family: var(--sans); font-weight: 600; margin-left: 3px; }
-  .tag { font-family: var(--mono); font-size: 12px; letter-spacing: 2px; color: var(--dim);
+  .tabs { display: flex; gap: 4px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px;
     text-transform: uppercase; opacity: 0; animation: fadein .8s ease forwards .3s; }
+  .tabs a { color: var(--dim); text-decoration: none; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; transition: color .2s, border-color .2s; }
+  .tabs a:hover { color: var(--text); border-color: rgba(237,235,255,0.14); }
+  .tabs a .k { color: var(--cyan); }
+  .cta { margin-top: clamp(18px,3vh,28px); display: flex; gap: 10px; flex-wrap: wrap; opacity: 0; animation: fadein 1s ease forwards 1s; }
+  .cta a { font-family: var(--mono); font-size: 13px; color: var(--text); text-decoration: none; padding: 10px 14px;
+    border-radius: 12px; border: 1px solid rgba(237,235,255,0.14); background: rgba(255,255,255,0.04); backdrop-filter: blur(8px); transition: border-color .2s, color .2s; }
+  .cta a:hover { border-color: var(--cyan); color: var(--cyan); }
+  .cta a.primary { border-color: rgba(56,225,214,.5); }
 
   /* center thesis */
   .core { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 100%; }
@@ -129,11 +140,12 @@
     h1 .line { white-space: normal; }
     .base { flex-direction: column; align-items: flex-start; gap: 22px; }
     .meta { text-align: left; }
-    .tag { display: none; }
+    .top { flex-wrap: wrap; gap: 12px; }
+    .tabs a { padding: 6px 8px; }
   }
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; }
-    h1 .line, .sub, .eyebrow, .pipe, .meta, .tag { opacity: 1 !important; transform: none !important; }
+    h1 .line, .sub, .note, .eyebrow, .pipe, .meta, .tabs, .cta { opacity: 1 !important; transform: none !important; }
   }
 </style>
 </head>
@@ -148,6 +160,12 @@
   <div class="frame">
     <div class="top">
       <div class="logo">rw<span class="x">x</span><span class="labs">Labs</span></div>
+      <nav class="tabs">
+        <a href="research.html"><span class="k">r</span> research</a>
+        <a href="institutions.html"><span class="k">w</span> institutions</a>
+        <a href="work.html"><span class="k">x</span> track record</a>
+        <a href="https://hackmd.io/@rwxlabs" rel="noopener">hackmd ↗</a>
+      </nav>
     </div>
 
     <div class="core">
@@ -160,6 +178,10 @@
       <p class="sub">Well-researched work across software, business, and community development.</p>
       <p class="note"><span class="prompt">$</span> Inspired from Linux file permissions. <br>
       Read, Write, Execute. <br> The principled approach we follow.</p>
+      <div class="cta">
+        <a class="primary" href="research.html">./research — for Ethereum institutions →</a>
+        <a href="https://hackmd.io/@rwxlabs" rel="noopener">hackmd.io/@rwxlabs ↗</a>
+      </div>
     </div>
 
     <div class="base">

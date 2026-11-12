@@ -1,0 +1,49 @@
+# rwxLabs
+
+> rwxLabs (Research · Worldbuilding · Execution) is an independent lab, operated by Sun Flora Collective (OPC) Pvt. Ltd., publishing research on grants data and standards (DAOIP-5, EIP-4824), DAO governance, ecosystem evaluation and CROPS (censorship resistance, open source, privacy, security) for Ethereum institutions. Founder and lead researcher: Rashmi V Abbigeri.
+
+Research is written in the open on HackMD (https://hackmd.io/@rwxlabs, https://hackmd.io/@torchablazed). Every item below links to raw markdown suitable for retrieval. Items marked [draft] are unreviewed and should not be quoted as conclusions. The full machine-readable catalog is https://rwxlabs.com/research.json.
+
+## Institutional series
+- [Research for machines](https://rwxlabs.com/research/drafts/10-research-for-machines.md) [draft]: Institutions read research through AI systems. Five layers of machine-readability that Ethereum research organizations should adopt, with rwxLabs as a working implementation. For: Ethlabs, Ethereum Institutional, Ethereum Foundation · Enterprise (institutions.ethereum.org, Enterprise Onchain), Golem Foundation, Enterprise Ethereum Alliance.
+- [India and institutional Ethereum: a research agenda](https://rwxlabs.com/research/drafts/09-india-and-institutional-ethereum.md) [draft]: Builders, public digital infrastructure and defined regulation: five research questions for institutional Ethereum in India. For: Ethereum Foundation · Enterprise (institutions.ethereum.org, Enterprise Onchain), Ethereum Institutional, Ethlabs.
+- [Governance due diligence for institutions](https://rwxlabs.com/research/drafts/08-governance-due-diligence.md) [draft]: A six-part checklist for the governance risk an institution inherits when it builds on a DAO-governed protocol. For: Ethereum Institutional, Enterprise Ethereum Alliance.
+- [Retro analysis as accountability](https://rwxlabs.com/research/drafts/07-retro-analysis-as-accountability.md) [draft]: How to run a reproducible governance and spending retro, using the ENS Retro's design (open pipelines, dashboard and MCP server) as the template. For: Ethereum Institutional, Golem Foundation, Enterprise Ethereum Alliance.
+- [CROPS for institutions](https://rwxlabs.com/research/drafts/06-crops-for-institutions.md) [draft]: Censorship resistance, open source, privacy and security reframed as risk controls, with a five-question deployment checklist. For: Ethlabs, Ethereum Foundation · Enterprise (institutions.ethereum.org, Enterprise Onchain), Ethereum Institutional.
+- [How institutions should evaluate an Ethereum ecosystem](https://rwxlabs.com/research/drafts/05-how-institutions-should-evaluate-an-ecosystem.md) [draft]: Use innovation-systems frameworks (PESTLE, TIS, NIS) for structure, then score six pillars from metrics anyone can recompute. For: Ethereum Institutional, Ethlabs, Ethereum Foundation · Enterprise (institutions.ethereum.org, Enterprise Onchain).
+- [Measuring public goods funded by staking yield](https://rwxlabs.com/research/drafts/04-measuring-public-goods-funded-by-staking-yield.md) [draft]: A six-part measurement agenda for Octant-style yield-funded programs, aimed at institutions that may run similar programs. For: Golem Foundation.
+- [DAOIP-5 for institutional readers](https://rwxlabs.com/research/drafts/03-daoip5-for-institutional-readers.md) [draft]: The grants metadata standard explained as a building block for institutional reporting on ecosystem spending. For: Enterprise Ethereum Alliance, Ethereum Institutional.
+- [A privacy ladder for funding data](https://rwxlabs.com/research/drafts/02-a-privacy-ladder-for-funding-data.md) [draft]: Seven disclosure levels over five funding facts, so every funder can contribute to ecosystem analysis without full transparency. For: Golem Foundation, Ethereum Institutional.
+- [Grant data is institutional intelligence](https://rwxlabs.com/research/drafts/01-grant-data-is-institutional-intelligence.md) [draft]: Grant programs are an ecosystem's R&D ledger. Six years of Stellar Community Fund data, read the way an institution reads a balance sheet. For: Ethereum Institutional, Ethereum Foundation · Enterprise (institutions.ethereum.org, Enterprise Onchain).
+
+## Published research
+- [State of Governance and Funding Models (talk)](https://hackmd.io/BJRe_58Kfe/download) (2026-09): Talk outline from Valley of the Commons 2026: DAOs of the world, GovBase, Constitutions of Web3, ENS Retro, gov/acc and funding models.
+- [How to evaluate an ecosystem?](https://hackmd.io/Bydv6Z3OMx/download) (2026-09): Core pillars for showing the state of a technology ecosystem, and when to use PESTLE, NIS, TIS or maturity models.
+- [Understanding FOSS community, for CROPS](https://hackmd.io/HkCAqljMMl/download) (2026-06): CROPS stewardship research: the strongest FOSS criticisms of Web3, each checked against its primary source, and where the two movements can build together.
+- [Ethereum Bengaluru Community Hub programming](https://hackmd.io/BJ_3G98CZx/download) (2026-05): Programming plan for the Bengaluru hub: DeFi weeks, a CROPS series, builder workshops and the Deep Tech × Web3 Explorer series.
+- [SCF Grant System Analysis Report](https://hackmd.io/H1q6ZQhVWg/download) (2026-01): 39 rounds, 734 applications and 537 projects from six years of the Stellar Community Fund, standardized and analyzed.
+- [Representing Public AI at Global Tech Summit 2025](https://hackmd.io/S1A7D0AWZl/download) (2025-12): Public AI as an inference utility, and the inference requirements of India's AI mission.
+- [Global Impact Summit 2025: Innovation Dialogue summary](https://hackmd.io/SkulK50MZx/download) (2025-12): Summary of the closed-door pre-summit dialogue ahead of India's AI Impact Summit 2026.
+- [gov/acc: Accelerating Governance Innovation in Web3 (contribution)](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) (2025-12): Contributed to the gov/acc initiative on accelerating governance innovation.
+- [OpenGrants × Stellar Community Fund pipeline](https://hackmd.io/BJQss0vJZg/download) (2025-11): End-to-end, event-driven pipeline that converts SCF grant data to DAOIP-5 and computes analytics (Dagster, bronze→silver→gold).
+- [Understanding Dagster + DLT + DuckDB in OSO](https://hackmd.io/HJV-aqekWx/download) (2025-10): How Open Source Observer materializes data assets locally; notes from debugging the grants data pipeline.
+- [Stats, metrics and impact evaluation around grants](https://hackmd.io/rJ9wPgvugx/download) (2025-08): An index of public dashboards, datasets and impact-evaluation tools across Web3 grant programs.
+- [Introducing OpenGrants by DAOstar](https://hackmd.io/rJk0y_Avll/download) (2025-08): A composable grants data layer built on DAOIP-5 and OSO: Gateway API, static reporting, datalake, partnership model.
+- [OpenGrants for Gitcoin 3.0](https://hackmd.io/ryUSa2Iwle/download) (2025-07): How the OpenGrants data layer supports Gitcoin 3.0's dedicated domain allocation.
+- [Building Standards for Web3 Grants: Privacy, Transparency, and Lessons Learnt](https://hackmd.io/S1aR6XELgg/download) (2025-07): Why grant data standardization is hard, and a seven-level privacy configuration matrix for funding data.
+- [DAOIP-5 Extensions Field: Implementation Brief](https://hackmd.io/Bkja1q9Slg/download) (2025-07): Proposal for a standardized extensions field in DAOIP-5, following OpenAPI-style x- precedents.
+- [Stellar Development Foundation DAOIP-5 Adoption](https://hackmd.io/Sk5hSYqgkl/download) (2024-11): How SDF links the foundation (payments) to the Stellar Community Fund (allocation) through attestation and an EIP-4824 entityURI.
+- [DAOIP-5 SuperLink (ELI5)](https://hackmd.io/BJhLgDxyke/download) (2024-10): A plain-language explainer of DAOIP-5 and why standardized funding data matters.
+- [Tutorial: Setting a context for a schema on EAS](https://hackmd.io/HJiY6wKIR/download) (2024-06): Step-by-step guide to adding context to an Ethereum Attestation Service schema.
+- [Governance on StarkNet](https://hackmd.io/rJe8739Np/download) (2023-12): Starknet Asia Research Fellowship 2023: StarkNet and Cairo, the scope of governance, and DAO frameworks and tools.
+- [What are modular blockchains and how is modularity achieved?](https://hackmd.io/HJHur-V7T/download) (2023-11): Taiko × SheFi scholarship research on modular blockchain architecture.
+- [On privacy in Web3: interview with Tutela (Golem Foundation)](https://golem.foundation/2022/02/07/interview-Tutela.html) (2022-02): Interview with Will, Kaili and Mike of the Tutela privacy research team, published on the Golem Foundation blog.
+
+## About
+- [Track record](https://rwxlabs.com/work.html): engagements, talks and hackathon builds since 2020
+- [For institutions](https://rwxlabs.com/institutions.html): research mapped to Golem Foundation, Ethlabs, Ethereum Institutional, EF Enterprise and the EEA
+
+## Optional
+- [DAOIP-5 specification](https://github.com/metagov/daostar/blob/main/DAOIPs/daoip-5.md)
+- [EIP-4824](https://eips.ethereum.org/EIPS/eip-4824)
+- Contact: hello@rwxlabs.com
