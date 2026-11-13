@@ -73,9 +73,9 @@
         return (state.track === "all" || it.tracks.indexOf(state.track) > -1) &&
                (state.inst === "all" || (it.for || []).indexOf(state.inst) > -1);
       });
-      var series = match.filter(function (it) { return it.status === "draft"; })
+      var series = match.filter(function (it) { return it.series; })
         .sort(function (a, b) { return a.id < b.id ? -1 : 1; });
-      var pub = match.filter(function (it) { return it.status !== "draft"; })
+      var pub = match.filter(function (it) { return !it.series; })
         .sort(function (a, b) { return a.date < b.date ? 1 : -1; });
       $("series").innerHTML = series.map(card).join("") || '<p class="empty">Nothing in this filter yet.</p>';
       $("published").innerHTML = pub.map(card).join("") || '<p class="empty">Nothing in this filter yet.</p>';
@@ -116,7 +116,8 @@
     }
 
     var rawText = "";
-    fetch(rawUrl(it)).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (txt) {
+    var getText = function (u) { return fetch(u).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }); };
+    getText(rawUrl(it)).catch(function () { return new Promise(function (ok) { setTimeout(ok, 800); }).then(function () { return getText(rawUrl(it)); }); }).then(function (txt) {
       rawText = txt;
       var html = DOMPurify.sanitize(marked.parse(cleanHackmd(txt), { gfm: true, breaks: false }));
       var art = $("article");

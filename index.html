@@ -24,8 +24,7 @@
     --sans: "Space Grotesk", system-ui, sans-serif;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
-  html, body { min-height: 100%; }
-  html { height: 100%; }
+  html, body { height: 100%; overflow: hidden; }
   body {
     background: var(--bg0);
     color: var(--text);
@@ -48,7 +47,7 @@
   .vignette { position: fixed; inset: 0; z-index: 1; pointer-events: none;
     background: radial-gradient(ellipse at center, transparent 40%, rgba(11,10,31,0.6) 100%); }
 
-  .frame { position: relative; z-index: 2; min-height: 100vh; min-height: 100dvh; display: flex; flex-direction: column;
+  .frame { position: relative; z-index: 2; height: 100%; display: flex; flex-direction: column;
     padding: clamp(22px, 4vh, 46px) clamp(24px, 6vw, 80px); }
 
   /* top bar */
@@ -61,11 +60,6 @@
   .tabs a { color: var(--dim); text-decoration: none; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; transition: color .2s, border-color .2s; }
   .tabs a:hover { color: var(--text); border-color: rgba(237,235,255,0.14); }
   .tabs a .k { color: var(--cyan); }
-  .cta { margin-top: clamp(18px,3vh,28px); display: flex; gap: 10px; flex-wrap: wrap; opacity: 0; animation: fadein 1s ease forwards 1s; }
-  .cta a { font-family: var(--mono); font-size: 13px; color: var(--text); text-decoration: none; padding: 10px 14px;
-    border-radius: 12px; border: 1px solid rgba(237,235,255,0.14); background: rgba(255,255,255,0.04); backdrop-filter: blur(8px); transition: border-color .2s, color .2s; }
-  .cta a:hover { border-color: var(--cyan); color: var(--cyan); }
-  .cta a.primary { border-color: rgba(56,225,214,.5); }
 
   /* center thesis */
   .core { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 100%; }
@@ -145,7 +139,7 @@
   }
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; }
-    h1 .line, .sub, .note, .eyebrow, .pipe, .meta, .tabs, .cta { opacity: 1 !important; transform: none !important; }
+    h1 .line, .sub, .note, .eyebrow, .pipe, .meta, .tabs { opacity: 1 !important; transform: none !important; }
   }
 </style>
 </head>
@@ -161,10 +155,7 @@
     <div class="top">
       <div class="logo">rw<span class="x">x</span><span class="labs">Labs</span></div>
       <nav class="tabs">
-        <a href="research.html"><span class="k">r</span> research</a>
-        <a href="institutions.html"><span class="k">w</span> institutions</a>
-        <a href="work.html"><span class="k">x</span> track record</a>
-        <a href="https://hackmd.io/@rwxlabs" rel="noopener">hackmd ↗</a>
+        <a href="research.html"><span class="k">$</span> writeups</a>
       </nav>
     </div>
 
@@ -178,10 +169,6 @@
       <p class="sub">Well-researched work across software, business, and community development.</p>
       <p class="note"><span class="prompt">$</span> Inspired from Linux file permissions. <br>
       Read, Write, Execute. <br> The principled approach we follow.</p>
-      <div class="cta">
-        <a class="primary" href="research.html">./research — for Ethereum institutions →</a>
-        <a href="https://hackmd.io/@rwxlabs" rel="noopener">hackmd.io/@rwxlabs ↗</a>
-      </div>
     </div>
 
     <div class="base">
