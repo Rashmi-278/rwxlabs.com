@@ -4,7 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>rwxLabs — Research · Worldbuild · Execution</title>
-<meta name="description" content="An independent lab for research, worldbuilding, and execution as one pipeline.">
+<meta name="description" content="An independent lab for research, worldbuilding, and execution as one pipeline. Research on grants data, governance and CROPS for Ethereum institutions.">
+<link rel="alternate" type="application/json" href="research.json" title="rwxLabs research catalog">
+<link rel="alternate" type="application/rss+xml" href="feed.xml" title="rwxLabs research">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -53,8 +55,11 @@
   .logo { font-family: var(--mono); font-size: clamp(18px,2.4vw,22px); font-weight: 500; letter-spacing: 1px; }
   .logo .x { color: var(--cyan); font-weight: 700; }
   .logo .labs { font-family: var(--sans); font-weight: 600; margin-left: 3px; }
-  .tag { font-family: var(--mono); font-size: 12px; letter-spacing: 2px; color: var(--dim);
+  .tabs { display: flex; gap: 4px; flex-wrap: wrap; font-family: var(--mono); font-size: 12px; letter-spacing: 1.5px;
     text-transform: uppercase; opacity: 0; animation: fadein .8s ease forwards .3s; }
+  .tabs a { color: var(--dim); text-decoration: none; padding: 8px 12px; border-radius: 10px; border: 1px solid transparent; transition: color .2s, border-color .2s; }
+  .tabs a:hover { color: var(--text); border-color: rgba(237,235,255,0.14); }
+  .tabs a .k { color: var(--cyan); }
 
   /* center thesis */
   .core { flex: 1; display: flex; flex-direction: column; justify-content: center; max-width: 100%; }
@@ -129,11 +134,12 @@
     h1 .line { white-space: normal; }
     .base { flex-direction: column; align-items: flex-start; gap: 22px; }
     .meta { text-align: left; }
-    .tag { display: none; }
+    .top { flex-wrap: wrap; gap: 12px; }
+    .tabs a { padding: 6px 8px; }
   }
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; }
-    h1 .line, .sub, .eyebrow, .pipe, .meta, .tag { opacity: 1 !important; transform: none !important; }
+    h1 .line, .sub, .note, .eyebrow, .pipe, .meta, .tabs { opacity: 1 !important; transform: none !important; }
   }
 </style>
 </head>
@@ -148,6 +154,9 @@
   <div class="frame">
     <div class="top">
       <div class="logo">rw<span class="x">x</span><span class="labs">Labs</span></div>
+      <nav class="tabs">
+        <a href="research.html"><span class="k">$</span> writeups</a>
+      </nav>
     </div>
 
     <div class="core">
