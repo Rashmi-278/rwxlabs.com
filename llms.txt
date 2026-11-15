@@ -5,27 +5,7 @@
 Writeups are written on HackMD; each link below points to raw markdown.
 
 ## Writeups
-- [State of Governance and Funding Models (talk)](https://hackmd.io/BJRe_58Kfe/download) (2026-09): Talk outline from Valley of the Commons 2026: DAOs of the world, GovBase, Constitutions of Web3, ENS Retro, gov/acc and funding models.
-- [How to evaluate an ecosystem?](https://hackmd.io/Bydv6Z3OMx/download) (2026-09): Core pillars for showing the state of a technology ecosystem, and when to use PESTLE, NIS, TIS or maturity models.
 - [Understanding FOSS community, for CROPS](https://hackmd.io/HkCAqljMMl/download) (2026-06): CROPS stewardship research: the strongest FOSS criticisms of Web3, each checked against its primary source, and where the two movements can build together.
-- [Ethereum Bengaluru Community Hub programming](https://hackmd.io/BJ_3G98CZx/download) (2026-05): Programming plan for the Bengaluru hub: DeFi weeks, a CROPS series, builder workshops and the Deep Tech × Web3 Explorer series.
-- [SCF Grant System Analysis Report](https://hackmd.io/H1q6ZQhVWg/download) (2026-01): 39 rounds, 734 applications and 537 projects from six years of the Stellar Community Fund, standardized and analyzed.
-- [Representing Public AI at Global Tech Summit 2025](https://hackmd.io/S1A7D0AWZl/download) (2025-12): Public AI as an inference utility, and the inference requirements of India's AI mission.
-- [Global Impact Summit 2025: Innovation Dialogue summary](https://hackmd.io/SkulK50MZx/download) (2025-12): Summary of the closed-door pre-summit dialogue ahead of India's AI Impact Summit 2026.
-- [gov/acc: Accelerating Governance Innovation in Web3 (contribution)](https://medium.com/@eugene.leventhal/gov-acc-accelerating-governance-innovation-in-web3-31309f06ab63) (2025-12): Contributed to the gov/acc initiative on accelerating governance innovation.
-- [OpenGrants × Stellar Community Fund pipeline](https://hackmd.io/BJQss0vJZg/download) (2025-11): End-to-end, event-driven pipeline that converts SCF grant data to DAOIP-5 and computes analytics (Dagster, bronze→silver→gold).
-- [Understanding Dagster + DLT + DuckDB in OSO](https://hackmd.io/HJV-aqekWx/download) (2025-10): How Open Source Observer materializes data assets locally; notes from debugging the grants data pipeline.
-- [Stats, metrics and impact evaluation around grants](https://hackmd.io/rJ9wPgvugx/download) (2025-08): An index of public dashboards, datasets and impact-evaluation tools across Web3 grant programs.
-- [Introducing OpenGrants by DAOstar](https://hackmd.io/rJk0y_Avll/download) (2025-08): A composable grants data layer built on DAOIP-5 and OSO: Gateway API, static reporting, datalake, partnership model.
-- [OpenGrants for Gitcoin 3.0](https://hackmd.io/ryUSa2Iwle/download) (2025-07): How the OpenGrants data layer supports Gitcoin 3.0's dedicated domain allocation.
-- [Building Standards for Web3 Grants: Privacy, Transparency, and Lessons Learnt](https://hackmd.io/S1aR6XELgg/download) (2025-07): Why grant data standardization is hard, and a seven-level privacy configuration matrix for funding data.
-- [DAOIP-5 Extensions Field: Implementation Brief](https://hackmd.io/Bkja1q9Slg/download) (2025-07): Proposal for a standardized extensions field in DAOIP-5, following OpenAPI-style x- precedents.
-- [Stellar Development Foundation DAOIP-5 Adoption](https://hackmd.io/Sk5hSYqgkl/download) (2024-11): How SDF links the foundation (payments) to the Stellar Community Fund (allocation) through attestation and an EIP-4824 entityURI.
-- [DAOIP-5 SuperLink (ELI5)](https://hackmd.io/BJhLgDxyke/download) (2024-10): A plain-language explainer of DAOIP-5 and why standardized funding data matters.
-- [Tutorial: Setting a context for a schema on EAS](https://hackmd.io/HJiY6wKIR/download) (2024-06): Step-by-step guide to adding context to an Ethereum Attestation Service schema.
-- [Governance on StarkNet](https://hackmd.io/rJe8739Np/download) (2023-12): Starknet Asia Research Fellowship 2023: StarkNet and Cairo, the scope of governance, and DAO frameworks and tools.
-- [What are modular blockchains and how is modularity achieved?](https://hackmd.io/HJHur-V7T/download) (2023-11): Taiko × SheFi scholarship research on modular blockchain architecture.
-- [On privacy in Web3: interview with Tutela (Golem Foundation)](https://golem.foundation/2022/02/07/interview-Tutela.html) (2022-02): Interview with Will, Kaili and Mike of the Tutela privacy research team, published on the Golem Foundation blog.
 
 ## Optional
 - Contact: hello@rwxlabs.com
