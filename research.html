@@ -4,9 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Writeups — rwxLabs</title>
-<meta name="description" content="rwxLabs research on grants data, governance, ecosystems and CROPS, written for Ethereum institutions. Read in place from HackMD.">
-<link rel="alternate" type="application/json" href="research.json" title="rwxLabs research catalog">
-<link rel="alternate" type="text/plain" href="llms.txt" title="llms.txt">
+<meta name="description" content="Writeups from rwxLabs on grants data, governance, ecosystems and open source.">
+<link rel="alternate" type="application/rss+xml" href="feed.xml" title="rwxLabs writeups">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
@@ -18,58 +17,28 @@
   <nav class="nav">
     <a class="logo" href="index.html">rw<span class="x">x</span><span class="labs">Labs</span></a>
     <div class="tabs">
-      <a href="research.html" aria-current="page"><span class="k">r</span> writeups</a>
-      <a href="institutions.html"><span class="k">w</span> institutions</a>
-      <a href="work.html"><span class="k">x</span> track record</a>
-      <a href="https://hackmd.io/@rwxlabs" rel="noopener">hackmd ↗</a>
+      <a href="research.html" aria-current="page"><span class="k">$</span> writeups</a>
     </div>
   </nav>
 
-  <!-- LIST MODE -->
   <main id="list">
     <header class="page-head">
-      <div class="eyebrow">r — writeups</div>
-      <h1>Research that institutions <span class="grad">can use.</span></h1>
-      <p>Grants data, governance, ecosystem evaluation and CROPS. Written in the open on
-        <a href="https://hackmd.io/@rwxlabs">HackMD</a>, read here in place, and published in machine-readable form for the systems institutions use.</p>
-      <p class="cmd"><span class="p">$</span>curl rwxlabs.com/<a href="research.json">research.json</a> · <a href="llms.txt">llms.txt</a> · <a href="feed.xml">feed.xml</a></p>
+      <h1>Writeups</h1>
+      <p>Notes and research, written in the open on <a href="https://hackmd.io/@rwxlabs">HackMD</a>.</p>
     </header>
-
-    <section>
-      <div class="filters" id="trackFilters" aria-label="Filter by track"></div>
-      <div class="filters" id="forFilters" aria-label="Filter by institution"></div>
-      <h2 id="seriesHead" style="margin-top:28px">Institutional series <span class="tag draft">drafts</span></h2>
-      <p class="lede" id="seriesLede">Ten writeups for the institutions shaping Ethereum's next phase, each built on the earlier research below. Drafts under review; not yet published.</p>
-      <div class="grid" id="series"></div>
-      <h2 style="margin-top:44px">Earlier research</h2>
-      <p class="lede">Notes and papers from <a href="https://hackmd.io/@rwxlabs">@rwxlabs</a> and the founder's research log, <a href="https://hackmd.io/@torchablazed">@torchablazed</a>.</p>
-      <div class="grid" id="published"></div>
-    </section>
+    <ol class="posts" id="posts"></ol>
   </main>
 
-  <!-- READER MODE -->
   <main id="reader" hidden>
-    <div class="reader-bar">
-      <a href="research.html">← all research</a>
-      <div class="actions" id="readerActions"></div>
-    </div>
-    <div id="readerNotice"></div>
-    <article class="article" id="article"><p class="empty">Loading…</p></article>
-    <div id="embedHost"></div>
-    <div class="cite" id="cite" hidden>
-      <div class="h">Cite this</div>
-      <pre id="citeText"></pre>
-    </div>
+    <div class="reader-bar"><a href="research.html">← writeups</a></div>
+    <iframe id="note" class="frame-embed" title="HackMD note"></iframe>
   </main>
 
   <footer>
-    <div>rwxLabs · by <a href="https://sunfloracollective.com">Sun Flora Collective (OPC) Pvt. Ltd.</a> · <a href="mailto:hello@rwxlabs.com">hello@rwxlabs.com</a></div>
-    <div class="machine"><a href="research.json">research.json</a><a href="llms.txt">llms.txt</a><a href="feed.xml">rss</a></div>
+    <div>rwxLabs · <a href="mailto:hello@rwxlabs.com">hello@rwxlabs.com</a></div>
   </footer>
 </div>
 
-<script src="assets/vendor/marked.min.js"></script>
-<script src="assets/vendor/purify.min.js"></script>
 <script src="assets/research.js"></script>
 </body>
 </html>
