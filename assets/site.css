@@ -140,7 +140,7 @@ a.card:hover { border-color: rgba(56,225,214,.45); transform: translateY(-2px); 
 .article table { border-collapse: collapse; font-size: 14px; min-width: 100%; }
 .article th, .article td { border: 1px solid var(--line); padding: 8px 10px; text-align: left; vertical-align: top; }
 .article th { background: var(--bg1); }
-.frame-embed { width: 100%; height: 80vh; border: 1px solid var(--line); border-radius: 14px; background: #fff; margin: 24px 0 64px; }
+.frame-embed { display: block; width: 100%; height: calc(100vh - 170px); min-height: 480px; border: 1px solid var(--line); border-radius: 14px; background: #fff; margin: 16px 0 40px; }
 .cite { max-width: var(--read); margin: 0 auto 64px; border: 1px solid var(--line); border-radius: 14px; padding: 16px; background: var(--card); }
 .cite .h { font-family: var(--mono); font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--dim); margin-bottom: 8px; }
 .cite pre { font-family: var(--mono); font-size: 12.5px; white-space: pre-wrap; word-break: break-word; color: var(--text); }
@@ -160,3 +160,16 @@ footer .machine a:hover { color: var(--cyan); }
   .article { font-size: 16px; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* writeups list */
+.posts { list-style: none; padding: 8px 0 48px; }
+.posts li + li { border-top: 1px solid var(--line); }
+.posts a { display: grid; grid-template-columns: 90px minmax(0, 1fr); column-gap: 20px; row-gap: 4px; padding: 18px 0; text-decoration: none; color: var(--text); }
+.posts a:hover .t { color: var(--cyan); }
+.posts .d { grid-row: span 2; font-family: var(--mono); font-size: 12px; color: var(--dim); padding-top: 3px; }
+.posts .t { font-size: 18px; font-weight: 600; letter-spacing: -0.01em; transition: color .2s; }
+.posts .s { color: var(--dim); font-size: 14.5px; }
+@media (max-width: 560px) {
+  .posts a { grid-template-columns: 1fr; }
+  .posts .d { grid-row: auto; padding: 0; }
+}
